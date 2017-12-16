@@ -1,44 +1,58 @@
 <!DOCTYPE html>
-
 <html lang="en-us">
 
 <head>
-
   <meta charset="UTF-8">
-
   <title>GIFTASTIQUE!</title>
-
-
-
 </head>
 
 <body>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
 
- 	<script>
+	<h4>OH THIS IS SO NOT DONE YET</h4>
+
+	<div id="header"></div>
+	<div id="gif-results"></div>
+
+  	<script type="text/javascript">
 
 	// create an array of strings related to a certain topic
 
-	var movements = ["falling", "swaying", "hustling", "herkie", "shuffling", "jumping", "downward dog", "shivering", "jazz hands", "whirling", "flipping"]
+		var movements = ["falling", "swaying", "hustling", "herkie", "shuffling", "jumping", "downward dog", "shivering", "jazz hands", "whirling", "flipping"]
 
-	// take the topics in this array and create buttons in HTML
+	// // take the topics in this array and create buttons in HTML
 
-	for (i = 0; i < movements.length; i++) {
-		var x[i] = document.createElement("BUTTON")
-		var t[i] = document.createTextNode("Click me");
-	    x[i].appendChild(t[i]);
-	    document.body.appendChild(x[i]);
-	}
+		for (i = 0; i < movements.length; i++) {
+			document.createElement("BUTTON");
+			document.createTextNode(movements[i]);
+		    $("#header").append();
+		    $("#header").append(x);
+		}
 
-	// user clicks button, page grabs 10 gifs from GIPHY API
+	// queryURL for Giphy API
+	    var queryURL = "https://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC";
 
-	// create click-stop-n-go feature
+	    $.ajax({
+	      url: queryURL,
+	      method: 'GET'
+	    }).done(function(response) {
+	      console.log(response);
+	      $("#gif-results").html()
+	    });
 
-	// for each gif, display rating via API 
-	// (only move on when image button press works)
 
-	// make form that takes value of user input box and adds it to topics array
 
-	// add a function call that whaaaa???????
+		// user clicks button, page grabs 10 gifs from GIPHY API
+
+		// create click-stop-n-go feature
+
+		// for each gif, display rating via API 
+		// (only move on when image button press works)
+
+		// make form that takes value of user input box and adds it to topics array
+
+		// add a function call that whaaaa???????
 
 	</script>
 
